@@ -1,24 +1,13 @@
 #!/bin/bash
 
-
-################
-#About: This Script calls the git api with an provided end point which collborator and prints the list of user have accesss to the particular repository
-#Input: We need to export 'username' and 'token' and run the script by providing this two arguments 'repo owner' and 'repo name'
-#Owner: Abhishek Sontakke
-#Date : 12 August 2024
-#Version: V1
-
-# calling the helper function
-helper()
-
 # GitHub API URL
 API_URL="https://api.github.com"
 
-# GitHub username and personal access token getting this two things from terminal( exporting)
+# GitHub username and personal access token
 USERNAME=$username
 TOKEN=$token
 
-# Setting an arguments which we need to pass to the script which is user/orgnisation name and repository name(command line arguments)
+# User and Repository information
 REPO_OWNER=$1
 REPO_NAME=$2
 
@@ -50,14 +39,4 @@ function list_users_with_read_access {
 # Main script
 
 echo "Listing users with read access to ${REPO_OWNER}/${REPO_NAME}..."
-
-# Helper function if anyone run the script without giving the command line arguments
-
-function helper {
-
-if [ "$#" -ne 2 ]; then
-	
-echo " Please execute the script with required cmd args"
-exit 1
-fi
-}
+list_users_with_read_access

@@ -6,6 +6,7 @@ GIT_API_URL="https://api.github.com"
 
 # I need exporter here
 USERNAME=$username
+TOKEN=$token
 
 # setting up the arguments
 REPO_OWNER=$1
@@ -24,7 +25,7 @@ local endpoint="$1"
 local url="${GIT_API_URL}/${endpoint}"
 
 #send a get request to the github api with authentication
-curl -s "$url"
+curl -s -u "${USERNAME}:${TOKEN}" "$url"
 
 }	
 

@@ -24,7 +24,7 @@ local endpoint="$1"
 local url="${GIT_API_URL}/${endpoint}"
 
 #send a get request to the github api with authentication
-curl -s -u "$USERNAME" "$url"
+curl -s "$url"
 
 }	
 

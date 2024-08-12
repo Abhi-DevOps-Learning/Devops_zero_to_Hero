@@ -30,7 +30,7 @@ curl -s -u "${USERNAME}:${TOKEN}" "$url"
 }	
 
 # list the user with read access in the repo
-function list_repositories{
+function list_repositories {
 
 	local endpoint="orgs/${REPO_OWNER}/repos"
 

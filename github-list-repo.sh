@@ -43,7 +43,7 @@ function list_repositories {
 	# fetch the repositories 
         repositories="$(github_api_get "$endpoint")"
 
-#Display the lists of collaboraters with read access
+#Display the lists of repositories
 if [[ -z "$repositories" ]]; then
                  echo " no repositories found for the organisation : $REPO_OWNER"
 	 else

@@ -1,5 +1,11 @@
 #!/bin/bash
 
+################
+#About: This Script calls the git api with an provided end point and prints the list of repositories
+#Input: We need to export 'username' and 'token' and run the script by providing this arguments 'repo owner'.
+#Owner: Abhishek Sontakke
+#Date : 12 August 2024
+#Version: V2
 
 # Calling the Git API url
 GIT_API_URL="https://api.github.com"
